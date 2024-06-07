@@ -1,0 +1,43 @@
+@Test
+public void testCarGetMake() {
+   Car car = new Car("Toyota", "Camry", 25000.0);
+   assertEquals("Toyota", car.getMake());
+}
+
+@Test
+public void testCarGetModel() {
+   Car car = new Car("Toyota", "Camry", 25000.0);
+   assertEquals("Camry", car.getModel());
+}
+
+@Test
+public void testCarGetPrice() {
+   Car car = new Car("Toyota", "Camry", 25000.0);
+   assertEquals(25000.0, car.getPrice(), 0.0);
+}
+
+@Test
+public void testCustomerGetName() {
+   Customer customer = new Customer("John Doe", "123 Main St", "555-555-5555");
+   assertEquals("John Doe", customer.getName());
+}
+
+@Test
+public void testCustomerGetAddress() {
+   Customer customer = new Customer("John Doe", "123 Main St", "555-555-5555");
+   assertEquals("123 Main St", customer.getAddress());
+}
+
+@Test
+public void testCustomerGetPhoneNumber() {
+   Customer customer = new Customer("John Doe", "123 Main St", "555-555-5555");
+   assertEquals("555-555-5555", customer.getPhoneNumber());
+}
+
+@Test
+public void testRentalTransactionTotalCost() {
+   Car car = new Car("Toyota", "Camry", 25000.0);
+   Customer customer = new Customer("John Doe", "123 Main St", "555-555-5555");
+   RentalTransaction transaction = new RentalTransaction(customer, car, 7);
+   assertEquals(175000.0, transaction.getTotalCost(), 0.0);
+}
